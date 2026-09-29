@@ -1,1 +1,1 @@
-# Advent of Code 
+![README Banner](aoc-readme-banner.png)

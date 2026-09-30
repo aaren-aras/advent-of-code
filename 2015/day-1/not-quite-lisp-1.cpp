@@ -9,7 +9,7 @@ int main() {
     // Read text file
     std::ifstream inputFile("not-quite-lisp.txt");
 
-    // Check file opened
+    // Check if file opened
     if (!inputFile.is_open()) {
         std::cerr << "*ERROR: Could not open file... :(\n";
         return 1;
@@ -21,4 +21,6 @@ int main() {
     // Loop through file character by character until EOF
     while (inputFile.get(ch)) ch == '(' ? floor_num++ : floor_num--;
     cout << format("The instructions take Santa to floor {}.\n", floor_num);
+
+    return 0;
 }

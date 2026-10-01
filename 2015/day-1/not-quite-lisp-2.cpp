@@ -1,17 +1,20 @@
-#include <iostream>
 #include <fstream>
+#include <iostream>
 #include <format>
 
+using std::ifstream;
+using std::cerr;
 using std::cout;
 using std::format;
 
 int main() {
+    
     // Read text file
-    std::ifstream inputFile("not-quite-lisp.txt");
+    ifstream inputFile("not-quite-lisp.txt");
 
     // Check if file opened
     if (!inputFile.is_open()) {
-        std::cerr << "*ERROR: Could not open file... :(\n";
+        cerr << "*ERROR: Could not open file... :(\n";
         return 1;
     }
 
@@ -19,7 +22,7 @@ int main() {
     int floor_num {};
     int position {};
     
-    // Loop through file character by character until EOF
+    // Loop through file, character by character, until EOF
     while (inputFile.get(ch)) {
         ch == '(' ? floor_num++ : floor_num--;
         position++;

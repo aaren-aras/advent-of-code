@@ -1,11 +1,13 @@
-#include <iostream>
 #include <fstream>
+#include <iostream>
 #include <format>
 
-using std::cout;
-using std::format;
+// using std::ifstream;
+// using std::cout;
+// using std::format;
 
 int main() {
+    
     // Read text file
     std::ifstream inputFile("not-quite-lisp.txt");
 
@@ -18,9 +20,9 @@ int main() {
     char ch;
     int floor_num {};
     
-    // Loop through file character by character until EOF
+    // Loop through file, character by character, until EOF
     while (inputFile.get(ch)) ch == '(' ? floor_num++ : floor_num--;
-    cout << format("The instructions take Santa to floor {}.\n", floor_num);
+    std::cout << std::format("The instructions take Santa to floor {}.\n", floor_num);
 
     return 0;
 }

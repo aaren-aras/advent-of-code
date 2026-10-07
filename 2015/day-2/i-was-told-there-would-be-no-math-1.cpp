@@ -25,7 +25,8 @@ int main() {
         int dims[3];
         char delimiter;
 
-        iss >> dims[0] >> delimiter >> dims[1] >> delimiter >> dims[2];
+        // Extract numbers from (i)nput (s)tring (s)tream line into array  
+        iss >> dims[0] >> delimiter >> dims[1] >> delimiter >> dims[2]; // delimiter = 'x'
         int l = dims[0];
         int w = dims[1];
         int h = dims[2];

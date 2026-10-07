@@ -1,6 +1,7 @@
-.vscode/
 
 # Ignore files without an extension (C++ executables)
 *
 !*.*
 !*/
+
+.vscode/

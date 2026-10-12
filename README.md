@@ -1,1 +1,1 @@
-![README Banner](aoc-readme-banner.png)
+![README Banner](readme-banner.png)

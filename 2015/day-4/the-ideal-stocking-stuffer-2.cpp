@@ -40,6 +40,7 @@ std::string getMD5(const std::string& input) {
 }
 
 int main() {
+    
     std::string puzzleInput = "iwrupvqb";
     std::string md5Hash;
     int lowestPosNum {}; 

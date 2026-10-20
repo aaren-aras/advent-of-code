@@ -25,13 +25,13 @@ int main() {
 
         // Count vowels
         int vowelCount {};
-        for (int i = 0; i < line.size(); ++i) {
+        for (size_t i = 0; i < line.size(); ++i) {
             if (line[i] == 'a' || line[i] == 'e' || line[i] == 'i' || line[i] == 'o' || line[i] == 'u')
                 vowelCount++;
         }
         
-        // Check for repeating characters (e.g., "aa", "bb")
-        for (int i = 0; i < line.size(); ++i) {
+        // Check for repeating letters (e.g., "aa", "bb")
+        for (size_t i = 0; i < line.size(); ++i) {
             if ((line[i] == line[i + 1]) && vowelCount >= 3) {
                 numNiceStr++;
                 break;

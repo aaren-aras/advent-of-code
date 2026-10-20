@@ -42,7 +42,7 @@ std::string getMD5(const std::string& input) {
 int main() {
     
     std::string puzzleInput = "iwrupvqb";
-    std::string md5Hash;
+    std::string md5Hash {};
     int lowestPosNum {}; 
 
     // Keep making input strings until one generates an MD5 hash starting with "000000"

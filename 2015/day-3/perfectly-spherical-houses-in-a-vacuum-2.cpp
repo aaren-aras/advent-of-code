@@ -29,7 +29,7 @@ int main() {
     Coord santaCoord {0, 0};
     Coord roboSantaCoord {0, 0};
 
-    std::vector<Coord> pastCoords;
+    std::vector<Coord> pastCoords {};
     pastCoords.push_back(santaCoord); // pre-add starting house at x=0, y=0
 
     bool santaTurn = true; // Santa starts first 

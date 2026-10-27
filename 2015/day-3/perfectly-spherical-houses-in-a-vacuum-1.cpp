@@ -27,7 +27,7 @@ int main() {
     int numHouses {1}; // that receive at least one present, initialized to 1 for starting house 
     
     Coord currentCoord {0, 0};
-    std::vector<Coord> pastCoords;
+    std::vector<Coord> pastCoords {};
     pastCoords.push_back(currentCoord); // pre-add starting house at x=0, y=0
     
     // Loop through file, character by character, until EOF

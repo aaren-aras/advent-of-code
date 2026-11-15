@@ -18,12 +18,13 @@ int main() {
     std::string line {};
     int numNiceStr {};
 
+    // Loop through file, line by line, until EOF
     while(std::getline(inputFile, line)) {
 
         // Check for pair of non-overlapping letters (e.g., "xyxy", but not "xxx")
         bool pairOfLetterPairs {};
-        for (int i = 0; i < line.size() - 2; ++i) {
-            for (int j = i + 2; j < line.size(); ++j) {
+        for (size_t i = 0; i < line.size() - 2; ++i) {
+            for (size_t j = i + 2; j < line.size(); ++j) {
                 // std::cout << std::format(
                 //     "Checking {} against {}\n", 
                 //     line.substr(i, 2), line.substr(j, 2)
@@ -36,7 +37,7 @@ int main() {
         }
 
         // Check for repeating characters with a letter between them (e.g., "aba", "bab")
-        for (int i = 0; i < line.size() - 2; ++i) {
+        for (size_t i = 0; i < line.size() - 2; ++i) {
             // std::cout << std::format(
             //     "Checking {} against {}\n", 
             //     line[i], line[i + 2]

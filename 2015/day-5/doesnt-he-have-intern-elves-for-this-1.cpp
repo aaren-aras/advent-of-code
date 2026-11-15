@@ -17,6 +17,7 @@ int main() {
     std::string line {};
     int numNiceStr {};
 
+    // Loop through file, line by line, until EOF
     while(std::getline(inputFile, line)) {
 
         // Check for 'ab', 'cd', 'pq', 'xy' first

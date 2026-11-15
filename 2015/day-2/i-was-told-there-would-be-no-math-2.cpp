@@ -22,11 +22,11 @@ int main() {
     while (std::getline(inputFile, line)) {
         std::istringstream iss(line);
         
-        int dims[3];
-        char delimiter;
+        int dims[3] {};
+        char delimiter {}; // 'x'
 
         // Extract numbers from (i)nput (s)tring (s)tream line into array  
-        iss >> dims[0] >> delimiter >> dims[1] >> delimiter >> dims[2]; // delimiter = 'x'
+        iss >> dims[0] >> delimiter >> dims[1] >> delimiter >> dims[2]; 
         int l = dims[0];
         int w = dims[1];
         int h = dims[2];

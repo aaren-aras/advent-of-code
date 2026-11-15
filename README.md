@@ -1,1 +1,1 @@
-![README Banner](readme-banner.png)
+![README Banner](banner.png)

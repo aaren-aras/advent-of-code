@@ -43,11 +43,11 @@ uint16_t parseInputFile(
         if (output == outputToGrab) {
             // Check if signal already found, then return cached value 
             auto it = std::find_if(solvedValues.begin(), solvedValues.end(),
-                [&output](const auto& pair) { return pair.first == output; });
+                [&output](const auto& pair) { return pair.first == output; }); // e.g., "b" in { "b", 19138 }
 
             if (it != solvedValues.end()) {
                 // std::cout << std::format("Already solved for '{}'! Signal is {}\n", output, it->second);
-                return it->second;
+                return it->second; // e.g., 19138 in { "b", 19138 }
             }
 
             // Continue recursing file until firstInput is a signal (uint16_t)

@@ -5,7 +5,7 @@
 #include <cstdint> // uint16_t
 #include <utility> // std::pair
 #include <sstream>
-#include <algorithm> // std::count
+#include <algorithm> // std::count, std::ranges::find
 #include <cctype> // std::isdigit
 #include <stdexcept> // std::runtime_error
 #include <format>
@@ -41,10 +41,9 @@ uint16_t parseInputFile(
 
         // std::cout << std::format("output: {}, outputToGrab: {}\n", output, outputToGrab);
         if (output == outputToGrab) {
+            
             // Check if signal already found, then return cached value 
-            auto it = std::find_if(solvedValues.begin(), solvedValues.end(),
-                [&output](const auto& pair) { return pair.first == output; }); // e.g., "b" in { "b", 19138 }
-
+            auto it = std::ranges::find(solvedValues, output, &std::pair<std::string, uint16_t>::first);
             if (it != solvedValues.end()) {
                 // std::cout << std::format("Already solved for '{}'! Signal is {}\n", output, it->second);
                 return it->second; // e.g., 19138 in { "b", 19138 }

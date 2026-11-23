@@ -15,7 +15,7 @@ uint16_t parseInputFile(
     std::vector<std::pair<std::string, uint16_t>>& solvedValues
 ) {
     
-    // Read text file
+    // Read text file (*UPDATED LN 55 FROM '19138 -> b' TO '16076 -> b' FOR PART TWO)
     std::ifstream inputFile("some-assembly-required.txt");
 
     std::string line {};
